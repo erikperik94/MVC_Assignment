@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>
+
+    <div>     
+        <a asp-area="" asp-controller="Home" asp-action="Index"><button>Index</button></a>
+        <a asp-area="" asp-controller="Home" asp-action="About"><button>About</button></a>
+        <a asp-area="" asp-controller="Home" asp-action="Contact"><button>Contact</button></a>
+        <a asp-area="" asp-controller="Home" asp-action="Projects"><button>Projects</button></a>
+    </div>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+        <div>
+            <h2>This is the footer</h2>
+        </div>
+    </footer>
+</body>
+</html>

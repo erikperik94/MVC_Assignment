@@ -12,8 +12,22 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
+#line 1 "C:\Users\aggfe\Desktop\MVC_Assignment\MVC_Assignment1\MVC_Assignment1\Views\_ViewImports.cshtml"
+using MVC_Assignment1.Controllers;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\aggfe\Desktop\MVC_Assignment\MVC_Assignment1\MVC_Assignment1\Views\_ViewImports.cshtml"
+using MVC_Assignment1.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0b94169f48c14271cd8de8805ee9df56a6f8c27c", @"/Views/Home/Projects.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a9af4978b9c2bfca24ef48e96efe5f8573634464", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b6f328101ea34fd300272e24cfb2be776efec825", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Projects : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

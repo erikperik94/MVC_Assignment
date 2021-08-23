@@ -22,6 +22,7 @@ namespace MVC_Assignment1
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllersWithViews();
             services.AddMvc();
             //services.AddControllersWithViews();
             //services.AddRazorPages();
@@ -52,6 +53,11 @@ namespace MVC_Assignment1
                 endpoints.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+
+               endpoints.MapControllerRoute(
+               name: "fevercheck",
+               pattern: "FeverCheck/{id?}",
+               defaults: new { controller = "Doctor", action = "FeverCheck" });
             });
         }
     }

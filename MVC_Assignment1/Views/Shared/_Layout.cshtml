@@ -3,25 +3,49 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/styles.css" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
     <header>
+        <div>
+            <p>This is the header</p>
+        </div>
+        <div class="divwrapper">
+            <!-- start divwrapper-->
 
-    <div>     
-        <a asp-area="" asp-controller="Home" asp-action="Index"><button>Index</button></a>
-        <a asp-area="" asp-controller="Home" asp-action="About"><button>About</button></a>
-        <a asp-area="" asp-controller="Home" asp-action="Contact"><button>Contact</button></a>
-        <a asp-area="" asp-controller="Home" asp-action="Projects"><button>Projects</button></a>
-    </div>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom item-a" id="navmenubox">
+                <a class="navbar-brand text-info" id="menulogo" href="@Url.Action("Index", "Home")" title="Index">
+                    <img alt="logo" src="@Url.Content("~/pictures/MVClogo.jpg")">
+                </a>
+
+                <div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("About", "Home")">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Contact", "Home")">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Projects", "Home")">Projects</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
     </header>
-    <div>
+
+    <div id="vsrenderbody">
         @RenderBody()
     </div>
-
+    
+    </div> <!-- end divwrapper-->
+    
     <footer>
         <div>
-            <h2>This is the footer</h2>
+            <p>This is the footer</p>
         </div>
     </footer>
 </body>

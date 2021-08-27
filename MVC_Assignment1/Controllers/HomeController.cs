@@ -10,7 +10,7 @@ namespace MVC_Assignment1.Controllers
     {
         public IActionResult Index()
         {
-            ViewBag.Message = "Home of Erik Info Page";
+            ViewBag.Message = "Home of Eriks Info Page";
             return View();
         }
         public IActionResult About()
@@ -20,12 +20,12 @@ namespace MVC_Assignment1.Controllers
 
         public IActionResult Contact()
         {
-            ViewBag.Message = "Erik Contact info";
+            ViewBag.Message = "Eriks Contact info";
             return View();
         }
         public IActionResult Projects()
         {
-            ViewBag.Message = "Erik Projects";
+            ViewBag.Message = "Eriks Projects";
             return View();
         }
     }

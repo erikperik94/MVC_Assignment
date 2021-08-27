@@ -22,10 +22,19 @@ namespace MVC_Assignment1
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(options =>
+            {
+                options.Cookie.Name = ".MVC_app.Session";
+                options.IdleTimeout = TimeSpan.FromSeconds(300);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
             services.AddControllersWithViews();
             services.AddMvc();
-            //services.AddControllersWithViews();
-            //services.AddRazorPages();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,11 +52,9 @@ namespace MVC_Assignment1
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
             app.UseAuthorization();
-
+            app.UseSession();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -58,6 +65,11 @@ namespace MVC_Assignment1
                name: "fevercheck",
                pattern: "FeverCheck/{id?}",
                defaults: new { controller = "Doctor", action = "FeverCheck" });
+
+                endpoints.MapControllerRoute(
+                name: "Game",
+                pattern: "GuessingGame/{id?}",
+                defaults: new { controller = "Game", action = "GuessingGame" });
             });
         }
     }

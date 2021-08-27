@@ -109,3 +109,4 @@ C:\Users\aggfe\Desktop\MVC_Assignment\MVC_Assignment1\MVC_Assignment1\obj\Debug\
 C:\Users\aggfe\Desktop\MVC_Assignment\MVC_Assignment1\MVC_Assignment1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\aggfe\Desktop\MVC_Assignment\MVC_Assignment1\MVC_Assignment1\obj\Debug\netcoreapp3.1\Razor\Views\Home\Projects.cshtml.g.cs
 C:\Users\aggfe\Desktop\MVC_Assignment\MVC_Assignment1\MVC_Assignment1\obj\Debug\netcoreapp3.1\Razor\Views\Doctor\FeverCheck.cshtml.g.cs
+C:\Users\aggfe\Desktop\MVC_Assignment\MVC_Assignment1\MVC_Assignment1\obj\Debug\netcoreapp3.1\Razor\Views\Game\GuessingGame.cshtml.g.cs

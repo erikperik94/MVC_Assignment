@@ -1,10 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using MVC_Assignment1.Models;
+using System;
 
 namespace MVC_Assignment1.Controllers
 {
@@ -23,7 +20,7 @@ namespace MVC_Assignment1.Controllers
         }
 
         [HttpPost]
-        public IActionResult GuessingGame(Game createCheck)
+        public IActionResult GuessingGame(Game updateView)
         {
             bool gameResult = false;
             Game gameObj = new Game();
@@ -31,7 +28,7 @@ namespace MVC_Assignment1.Controllers
             if (ModelState.IsValid)
             {
                 ViewBag.Title = "The Guessing Game";
-                string resultMsg = gameObj.CheckTheGuess(createCheck, out gameResult, (int)HttpContext.Session.GetInt32("Game"));
+                string resultMsg = gameObj.GuessCheck(updateView, out gameResult, (int)HttpContext.Session.GetInt32("Game"));
 
                 if (gameResult)
                 {
@@ -40,11 +37,11 @@ namespace MVC_Assignment1.Controllers
                 }
                 else
                 {
-                ViewBag.resultMessage = resultMsg;
-                return View();                    
+                    ViewBag.resultMessage = resultMsg;
+                    return View();
                 }
             }
-        return View(createCheck);
+            return View(updateView);
         }
     }
 }

@@ -12,15 +12,11 @@
         <div>
             <p>This is the header</p>
         </div>
-        <div class="divwrapper">
-            <!-- start divwrapper-->
-
-
+        <div>
             <nav class="navbar navbar-expand-lg navbar-dark bg-success border-bottom item-a" id="navmenubox">
                 <a class="navbar-brand text-info" id="menulogo" href="@Url.Action("Index", "Home")" title="Index">
                     <img alt="logo" src="@Url.Content("~/pictures/MVClogo.jpg")">
                 </a>
-
                 <div>
                     <ul class="navbar-nav">
                         <li class="nav-item">
@@ -37,11 +33,10 @@
             </nav>
     </header>
 
-    <div id="vsrenderbody">
+    <div>
         @RenderBody()
     </div>
-    
-    </div> <!-- end divwrapper-->
+    </div>
     
     <footer>
         <div>
